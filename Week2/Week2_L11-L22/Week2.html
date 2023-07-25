@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="Week2_style.css">
+	<title>Week 2 stuff</title>
+
+	<style>
+
+		p {
+			color: blue;
+			width: 400px;
+		}
+
+		h2{
+			color: #f0ff0f;
+			font-size: 38px;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+
+		p.big{
+			font-size: 20px;
+		}
+
+		.purple-color_class{
+			color: purple;
+			background-color: orange;
+		}
+
+		#orange-color_id{
+			color: orange;
+			background-color: purple;
+		}
+
+		a:link, a:visited{
+			text-decoration: none;
+			width: 200px;
+			/*
+			display indicates the style of the text in the "a href", reason is that this tag's defaultworks as an inline level element, hence changing the display to block changes it to a clock level element
+			*/
+			display: block;
+			background-color: green;
+			border: 1px solid blue;
+			color: black;
+			text-align: center;
+			margin-bottom: 1px;
+		}
+
+		#styling_part1{
+			font-family: Helvetica, sans-serif;
+			color: #00ffff;
+			font-style: italic;
+			font-weight: 400;
+			font-size: 20px;
+			text-transform: uppercase;
+			width: auto;
+			text-align: left;
+		}
+
+		#box{
+			background-color: blue;
+			padding: 10px;
+			border: 5px solid black;
+			width: 300px;
+			height: 50px;
+			box-sizing: border-box;
+			margin-top: 40px;
+			overflow: auto;
+		}
+
+		#content{
+			background-color: green;
+		}
+
+		#bg{
+			width: 500px;
+			height: 500px;
+			background-color: blue;
+			background-image: url("me.jpg");
+			background-size: contain;
+			background-position: bottom;
+
+			background: url("me.jpg") no-repeat contain;
+		}
+
+		*{
+			box-sizing: border-box;
+			margin: 10px;
+			padding: 0px;
+		}
+
+		#divFloatingElements{
+			background-color: #00FFFF;
+			padding: 10px;
+		}
+
+		#divFloatingElements p{
+			width: 50px;
+			height: 50px;
+			border: 1px solid black;
+			float: left;
+		}
+
+		#p1{
+			background-color: #A52A2A;
+		}
+
+		#p2{
+			background-color: #DEB887;
+		}
+
+		#p3{
+			background-color: #5F9EA0;
+			clear: left;
+		}
+
+		#p4{
+			background-color: #FF7F50;
+		}
+
+		section{
+			clear: both;
+		}
+
+		#divFloatingElement{
+			background-color: #00FFFF;
+			padding: 10px;
+			position: relative;
+			top: 10px;
+		}
+
+		#divFloatingElement p{
+			width: 50px;
+			height: 50px;
+			border: 1px solid black;
+		}
+
+		#p1_relative{
+			background-color: #A52A2A;
+			position: relative;
+			top: -60px;
+			left: -60px;
+		}
+
+		#p2_relative{
+			background-color: #DEB887;
+		}
+
+		#p1_absolute{
+			background-color: #A52A2A;
+			position: relative;
+			top: 75px;
+			left: 75px;
+		}
+
+		#p2_absolute{
+			background-color: #DEB887;
+		}
+
+		#p3_absolute{
+			background-color: #FF0000;
+			position: absolute;
+			top: 0px;
+			right: 0px;
+		}
+
+		#p4_absolute{
+			background-color: #FF7F50;
+		}
+
+
+
+	</style>
+</head>
+<body>
+
+	<ol>
+		
+		<li>
+			<h2>Anatomy of a CSS Rule</h2>
+
+			<h3>Subheading 1</h3>
+			<p>CSS works by associating rules with HTML elements. These rules govern how the content of specified elements should be displayed.
+			CSS rule contains two parts: a selector and a declaration.</ >
+
+			<h3>Subheading 2</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est maxime aperiam blanditiis reprehenderit voluptatem quia quas nesciunt amet atque temporibus quod harm sequi voluptate consequatur tenetur perferendis, cum ad! Eos.</p>
+		</li>
+
+		<li>
+		<h2>Element, class, &amp id Selectors;</h2>
+			<ul>
+
+				<li>
+				<p>
+					<b>Element Selector:</b> It is simply when we apply some sort of style to the element such as the "p" tag, which is an example of an element.
+				</p></li>
+
+				<li><p class="purple-color_class">
+					<b>Class Selector: </b> It is basically used when we define some element's(attribute's) name-value pair, or we say it as when we define an element such as "p" element's class, and directly get the ability to access the style properties of the certain class wherever it is used.
+				</p>
+
+				<p class="purple-color_class">
+					Targets one or more elements with the same class.
+					Multiple elements can have the same class, and a class can be applied to multiple elements. Used to group and apply shared styles or JavaScript functionality to multiple elements.
+				</p>
+				</li>
+
+				<li><p id="orange-color_id">
+					<b>Id Selector: Should be unique within the HTML document. An ID cannot be used multiple times. Targets a single unique element on the page. </b>
+				</p></li>
+
+
+			
+			</ul>
+		</li>
+
+		<li>
+			<h2>Combining Selectors</h2>
+			<p class="big">
+				Text in the Paragraph(&nbsp;"&nbsp;&lt;&nbsp;p&nbsp;&gt;&nbsp;"&nbsp;) tag, and part of the "big" class
+			</p>
+		</li>
+
+		<li>
+			<h2>Pseudo-Class Selector Types</h2>
+			<ul>
+				<li>link: Selector we use when working with "a href" links</li>
+				<li>visited: Selector we use when working with "a href" links</li>
+				<li>hover: Selector we use when working with "a href"</li>
+				<li>active: Selector we use when working with "a href"</li>
+				<li>nth-child(...): Selector we use when working with "a href"</li>
+			</ul>
+
+			<h3>Pseudo-Class Selector Application</h3>
+			<ul class="Pseudo-Class-Selectors">
+				<li><a href="https://github.com/Tanmay-Soni/FrontEnd_Dev">Front_End Repo</a></li>
+				<li><a href="https://github.com/Tanmay-Soni/COVID-19-ML-Model">Covid19_ML Repo</a></li>
+			</ul>
+
+
+		</li>
+
+		<li>
+			<h2 style="text-align: right;">Style Placement</h2>
+		</li>
+
+		<li>
+			<h2>Specificity Socre</h2>
+
+			<ol>
+				<li>style="..."</li>
+				<li>ID</li>
+				<li>Class, pseudo-class, attribute</li>
+				<li># of elements</li>
+			</ol>
+				<div><img src="SpecificityScoreEx1.jpg", width="25%"></div>
+				<div><img src="SpecificityScoreEx2.jpg", width="25%"></div>
+			
+			
+		</li>
+
+		<li>
+			<p id="styling_part1">Styling Part 1: Example of how to work with Styling on this text ur reading. We have giving this text its own style by editing it's style properties</p>
+		</li>
+
+		<li>
+			<div>Regular Text</div>
+			<div style="font-size: 2em;">2em Text relative to Regular Text
+				<div style="font-size: 2em; font-family: Optima, sans-serif;">2em Text, relative to the 2em text above
+					<div style="font-size: 0.5em">0.5em Text realtive to the 2em text above this</div>
+				</div>
+			</div>
+		</li>
+
+		<li>
+			<h2>The Box Model</h2>
+
+			<div id="box">
+				<div id="content">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				</div>
+			</div>
+		</li>
+
+		<li>
+			<h2>The background Property</h2>
+
+			<div id="bg">Background properties are fun</div>
+
+		</li>
+
+		<li>
+			<h2>Floating Elements</h2>
+
+			<div id="divFloatingElements">
+				<p id="p1"></p>
+				<p id="p2"></p>
+				<p id="p3"></p>
+				<p id="p4"></p>
+				<section>This is regular content continuing after the the paragraph boxes.</section>
+			</div>
+
+		</li>
+
+		<li>
+			<h2>Part 1: Relative and Absolute Element Positioning</h2>
+
+			<ul>
+				<li>
+					<div>Relative Positioning</div>
+					<div id="divFloatingElement">
+						<p id="p1_relative"></p>
+						<p id="p2_relative"></p>
+					</div>
+				</li>
+
+				<li>
+					<div>Absolute Positioning</div>
+					<div id="divFloatingElement">
+						<p id="p1_absolute"></p>
+						<p id="p2_absolute"></p>
+						<p id="p3_absolute"></p>
+						<p id="p4_absolute"></p>
+					</div>
+				</li>
+
+
+			</ul>
+		</li>
+
+	</ol>
+
+</body>
+</html>
